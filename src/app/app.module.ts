@@ -17,7 +17,7 @@ import { GlobalInterceptor } from './core/interceptors/global/global.interceptor
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
     ReactiveFormsModule,
   ],
   providers: [{
