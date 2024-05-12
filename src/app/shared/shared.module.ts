@@ -13,7 +13,7 @@ import { NgxDropzoneModule } from 'ngx-dropzone';
 @NgModule({
   imports: [
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
     MatInputModule,
     MatFormFieldModule,
     FormsModule,
