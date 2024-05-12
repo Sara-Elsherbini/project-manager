@@ -10,7 +10,7 @@ import { ChangePasswordComponent } from './components/change-password/change-pas
 import { RegisterComponent } from './components/register/register.component';
 import { AuthService } from './services/auth/auth.service';
 import { HttpClientModule } from '@angular/common/http';
-
+import { VerifyAccountComponent } from './components/verify-account/verify-account.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
     ResetPasswordComponent,
     LoginComponent,
     ChangePasswordComponent,
-    RegisterComponent
+    RegisterComponent,
+    VerifyAccountComponent
   ],
   imports: [
     CommonModule,
