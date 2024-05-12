@@ -63,4 +63,7 @@ export interface IReset {
 interface IForgetRes {
     message: string;
   }
-  
+  export interface IVerify {
+  email: string;
+  code: string;
+}
