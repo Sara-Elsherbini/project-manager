@@ -53,7 +53,7 @@ body {
 
 // Start Global style of the application
 * {
-  margin: 0 !important;
+  margin: 0 ;
 }
 $main-transition: 0.3s linear;
 $main-color: #ef9b28;
@@ -102,6 +102,8 @@ border-radius: 0.5rem;
       color: $main-color;
       position: relative;
       width: fit-content;
+      margin-bottom: 2rem;
+      
 
       &::after {
         content: "";

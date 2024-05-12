@@ -2,12 +2,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {FormsModule, ReactiveFormsModule,} from '@angular/forms';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
+import { HttpClientModule } from '@angular/common/http';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxDropzoneModule } from 'ngx-dropzone';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -15,25 +18,21 @@ import { NgxDropzoneModule } from 'ngx-dropzone';
     MatInputModule,
     MatFormFieldModule,
     FormsModule,
-    ReactiveFormsModule,
     MatIconModule,
     MatButtonModule,
     NgxDropzoneModule
   ],
-  declarations: [
-    SidebarComponent,
-    NavbarComponent
-  ],
+  declarations: [SidebarComponent, NavbarComponent],
   exports: [
     SidebarComponent,
     NavbarComponent,
-    ReactiveFormsModule
-    MatInputModule,
+    ReactiveFormsModule,
+    MatButtonModule,
     MatFormFieldModule,
+    MatInputModule,
     FormsModule,
     MatIconModule,
-    MatButtonModule,
     NgxDropzoneModule
   ]
 })
-export class SharedModule { }
+export class SharedModule {}

@@ -1,9 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/internal/Observable';
-import { ILogin, ILoginResponse,IDecryptedToken,IUserDetails, IChangePass } from '../../models/auth';
-
-
+import { IForget, IReset } from '../../models/auth';
+import { Observable } from 'rxjs';
+import { ILogin, ILoginResponse,IDecryptedToken,IUserDetails, IChangePass, IForget, IReset } from '../../models/auth';
 import { jwtDecode } from 'jwt-decode';
 import { FormGroup } from '@angular/forms';
 
@@ -11,6 +10,7 @@ HttpClient
 @Injectable({
   providedIn: 'root'
 })
+
 export class AuthService {
   
 
@@ -49,8 +49,6 @@ getCurrentUser(): Observable<IUserDetails> {
   return this._HttpClient.get<IUserDetails>('Users/CurrentUser');
 }
 
-
-
 changePass(data:IChangePass):Observable<any>{
   return this._HttpClient.put('Users/ChangePassword',data );
 }
@@ -58,6 +56,14 @@ changePass(data:IChangePass):Observable<any>{
 register(data: FormData): Observable<any> {
   return this._HttpClient.post('Users/Register', data);
 }
+
+forgetPassword(data:IForget):Observable<any>{
+return this._httpclient.post<IForget>('Users/Reset/Request', data)
+}
+
+resetPasssword(data:IReset):Observable<any>{
+  return this._httpclient.post<IForget>('Users/Reset', data)
+  }
 
 
 }
