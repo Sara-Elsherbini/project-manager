@@ -9,8 +9,8 @@ import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes = [
   { path: '', component: AuthComponent , children:[
-    {path: 'login', component: LoginComponent, title: 'Login'},
-    {path:'changePass' ,component:ChangePasswordComponent, title: 'change-password'},
+    { path: '', component: LoginComponent, title: 'Login' },
+    { path:'changePass' ,component:ChangePasswordComponent, title: 'change-password' },
     { path: 'register', component: RegisterComponent, title: 'Register' },
     { path: 'forget', component: ForegtPasswordComponent, title: 'reset' },
     { path: 'reset', component: ResetPasswordComponent, title: 'reset' },
