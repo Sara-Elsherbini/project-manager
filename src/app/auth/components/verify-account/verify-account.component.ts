@@ -5,7 +5,6 @@ import { IVerify } from '../../models/auth';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
-import { Chart } from 'angular-highcharts';
 
 @Component({
   selector: 'app-verify-account',
