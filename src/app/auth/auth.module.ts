@@ -16,9 +16,9 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     AuthComponent,
     ForegtPasswordComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
     LoginComponent,
-    ChangePasswordComponent
+    ChangePasswordComponent,
     RegisterComponent
   ],
   imports: [
