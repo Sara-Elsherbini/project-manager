@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { IForget, IReset } from '../../models/auth';
 import { Observable } from 'rxjs';
 import { ILogin, ILoginResponse,IDecryptedToken,IUserDetails, IChangePass, IForget, IReset } from '../../models/auth';
 import { jwtDecode } from 'jwt-decode';
@@ -64,6 +63,8 @@ return this._httpclient.post<IForget>('Users/Reset/Request', data)
 resetPasssword(data:IReset):Observable<any>{
   return this._httpclient.post<IForget>('Users/Reset', data)
   }
-
+  verify(verifyData: IVerify): Observable<{ message: string }> {
+    return this._HttpClient.put<{ message: string }>('Users/verify', verifyData);
+  }
 
 }
