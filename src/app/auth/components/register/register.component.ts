@@ -82,12 +82,12 @@ export class RegisterComponent implements OnInit {
 
     this._AuthService.register(myData).subscribe({
       next: (res) => {
-        console.log(res);
-        // this._NotifyService.Success("Data is Sent Successfully")
+
+
       },
       error:(errRes:HttpErrorResponse)=>{
         const errMsg=errRes.error.message
-        // this._NotifyService.ServerError(errMsg)
+
       },
       complete:()=>{
         this._ToastrService.success('Account Verified Successfully', 'Success');
