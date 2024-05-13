@@ -12,6 +12,8 @@ import {
 } from '@angular/forms';
 import { AuthService } from '../../services/auth/auth.service';
 import { HttpErrorResponse } from '@angular/common/http';
+import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -46,7 +48,10 @@ export class RegisterComponent implements OnInit {
     ]),
 
   });
-  constructor( private _AuthService:AuthService) { }
+  constructor( private _AuthService:AuthService,
+               private _ToastrService:ToastrService,
+               private _Router:Router
+  ) { }
 
   ngOnInit() {
   }
@@ -83,6 +88,10 @@ export class RegisterComponent implements OnInit {
       error:(errRes:HttpErrorResponse)=>{
         const errMsg=errRes.error.message
         // this._NotifyService.ServerError(errMsg)
+      },
+      complete:()=>{
+        this._ToastrService.success('Account Verified Successfully', 'Success');
+        this._Router.navigate(['/login'])
       }
     });
   }
